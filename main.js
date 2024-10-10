@@ -6,8 +6,12 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 NOTA: non è importante l'ordine con cui l'utente inserisce i numeri, basta che ne indovini il più possibile.
 */
 
-let randomNumbersEl = document.getElementById("random_numbers");
-let formEl = document.getElementById("numbers_form")
+const randomNumbersEl = document.getElementById("random_numbers");
+const formEl = document.getElementById("numbers_form");
+// let inputsEl = document.querySelectorAll("input");
+// console.log(inputsEl);
+// let btn_submitEl = document.getElementById("btn_submit");
+const resultsEl = document.getElementById("results");
 
 function generate5RandomIntegers() {
     let random_number_array = [];
@@ -21,7 +25,14 @@ function generate5RandomIntegers() {
 randomNumbersEl.innerHTML = generate5RandomIntegers();
 console.log(randomNumbersEl.innerHTML);
 
-let clock = setTimeout(function() {
-    randomNumbersEl.classList.add("d-none")
+const clock = setTimeout(function() {
+    randomNumbersEl.classList.add("d-none");
     formEl.classList.remove("d-none");
-}, 3000)
+}, 3000);
+
+formEl.addEventListener("submit", function(e) {
+    e.preventDefault();
+    formEl.classList.add("d-none");
+    resultsEl.classList.remove("d-none");
+    
+})

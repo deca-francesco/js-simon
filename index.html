@@ -30,7 +30,7 @@
         </div>
         <form action="" class="d-none d-flex flex-column w-50 m-auto" id="numbers_form">
             <h3>Ti ricordi i numeri?</h3>
-            <div class="mb-3">
+            <div class="mb-3 mt-2">
                 <label for="number1" class="form-label">Numero 1</label>
                 <input type="number" class="form-control" name="number1" id="number1" required/>
             </div>
@@ -50,8 +50,16 @@
                 <label for="number5" class="form-label">Numero 5</label>
                 <input type="number" class="form-control" name="number5" id="number5" required/>
             </div>
-            <button class="btn btn-secondary mt-4" type="submit">Metti alla prova la tua memoria</button>
+            <button class="btn btn-secondary mt-4" id="btn_submit" type="submit">Metti alla prova la tua memoria</button>
         </form>
+        <div id="results" class="d-flex w-50 m-auto justify-content-between d-none">
+            <div id="your_numbers">
+                <h4>I tuoi numeri</h4>
+            </div>
+            <div id="simon_numbers">
+                <h4>I numeri di Simon</h4>
+            </div>
+        </div>
     </main>
     <footer>
     </footer>
