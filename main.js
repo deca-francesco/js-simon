@@ -7,35 +7,21 @@ NOTA: non è importante l'ordine con cui l'utente inserisce i numeri, basta che 
 */
 
 let randomNumbersEl = document.getElementById("random_numbers");
+let formEl = document.getElementById("numbers_form")
 
-function generateRandomInteger(min, max) {
-    Math.floor(Math.random() * (max - min + 1)) + min;
+function generate5RandomIntegers() {
+    let random_number_array = [];
+    for (let i = 1; i <= 5; i++) {
+        let random_number = Math.floor(Math.random() * 100) + 1;
+        random_number_array.push(random_number);
+    }
+    return random_number_array.join(" | ");
 }
 
-randomNumbersEl.innerHTML = generateRandomInteger(1, 10);
+randomNumbersEl.innerHTML = generate5RandomIntegers();
 console.log(randomNumbersEl.innerHTML);
 
 let clock = setTimeout(function() {
-    randomNumbersEl.innerHTML = (`
-<div class="mb-3">
-    <label for="number1" class="form-label">Numero 1</label>
-    <input type="text" class="form-control" name="number1" id="number1"/>
-</div>
-<div class="mb-3">
-    <label for="number2" class="form-label">Numero 2</label>
-    <input type="text" class="form-control" name="number2" id="number2"/>
-</div>
-<div class="mb-3">
-    <label for="number3" class="form-label">Numero 3</label>
-    <input type="text" class="form-control" name="number3" id="number3"/>
-</div>
-<div class="mb-3">
-    <label for="number4" class="form-label">Numero 4</label>
-    <input type="text" class="form-control" name="number4" id="number4"/>
-</div>
-<div class="mb-3">
-    <label for="number5" class="form-label">Numero 5</label>
-    <input type="text" class="form-control" name="number5" id="number5"/>
-</div>
-        `);
+    randomNumbersEl.classList.add("d-none")
+    formEl.classList.remove("d-none");
 }, 3000)

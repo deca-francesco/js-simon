@@ -24,10 +24,34 @@
     <header>
     </header>
     <main class="text-center">
-        <h1>Simon says</h1>
-        <div id="random_numbers" class="d-flex flex-column w-50 m-auto">
-
+        <h1 class="my-4">Simon says</h1>
+        <div id="random_numbers" class="">
+            
         </div>
+        <form action="" class="d-none d-flex flex-column w-50 m-auto" id="numbers_form">
+            <h3>Ti ricordi i numeri?</h3>
+            <div class="mb-3">
+                <label for="number1" class="form-label">Numero 1</label>
+                <input type="number" class="form-control" name="number1" id="number1" required/>
+            </div>
+            <div class="mb-3">
+                <label for="number2" class="form-label">Numero 2</label>
+                <input type="number" class="form-control" name="number2" id="number2" required/>
+            </div>
+            <div class="mb-3">
+                <label for="number3" class="form-label">Numero 3</label>
+                <input type="number" class="form-control" name="number3" id="number3" required/>
+            </div>
+            <div class="mb-3">
+                <label for="number4" class="form-label">Numero 4</label>
+                <input type="number" class="form-control" name="number4" id="number4" required/>
+            </div>
+            <div class="mb-3">
+                <label for="number5" class="form-label">Numero 5</label>
+                <input type="number" class="form-control" name="number5" id="number5" required/>
+            </div>
+            <button class="btn btn-secondary mt-4" type="submit">Metti alla prova la tua memoria</button>
+        </form>
     </main>
     <footer>
     </footer>
